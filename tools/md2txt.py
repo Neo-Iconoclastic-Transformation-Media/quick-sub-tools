@@ -10,7 +10,7 @@ def process_markdown_file(input_file, output_file):
         content = file.read()
     
     # 删除所有标题
-    content = re.sub(r'^#+\s*', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^#+\s*?$', '', content, flags=re.MULTILINE)
     
     # 删除所有换行符
     content = content.replace('\n', '')
