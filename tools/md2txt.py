@@ -18,8 +18,8 @@ def process_markdown_file(input_file, output_file):
     # 替换中文逗号和句号为换行符
     content = re.sub(r'[，。]', '\n', content)
 
-    # 在感叹号、问号、省略号之后添加换行符
-    specPuct = r'[！？…]'
+    # 在感叹号、问号、省略号、冒号、分号之后添加换行符
+    specPuct = r'[！？…：；]'
     content = re.sub(specPuct, r'\g<0>\n',content)
     
     # 替换顿号为空格
